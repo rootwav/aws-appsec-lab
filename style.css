@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+}
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
