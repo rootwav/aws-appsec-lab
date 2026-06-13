@@ -1,69 +1,83 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: 'Segoe UI', sans-serif;
+body {
+    font-family: "Segoe UI", sans-serif;
     background: linear-gradient(
         135deg,
         #0f172a,
         #1e293b,
         #312e81
     );
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.container{
-    text-align:center;
-    max-width:800px;
-    padding:40px;
+.container {
+    text-align: center;
+    max-width: 900px;
+    padding: 40px;
 }
 
-.badge{
-    display:inline-block;
-    padding:10px 20px;
-    border-radius:50px;
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(10px);
-    margin-bottom:30px;
-    font-size:14px;
-    letter-spacing:2px;
+.badge {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
-h1{
-    font-size:72px;
-    font-weight:800;
-    line-height:1.1;
+h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+
     background: linear-gradient(
         90deg,
         #38bdf8,
         #8b5cf6,
         #ec4899
     );
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.subtitle{
-    margin-top:30px;
-    font-size:24px;
-    color:#e2e8f0;
+.subtitle {
+    margin-top: 30px;
+    font-size: 26px;
+    color: #e2e8f0;
 }
 
-.description{
-    margin-top:15px;
-    color:#94a3b8;
-    font-size:18px;
+.description {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #94a3b8;
 }
 
-.footer{
-    margin-top:70px;
-    color:#cbd5e1;
-    font-size:15px;
+.signature {
+    margin-top: 80px;
+}
+
+.signature h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.signature p {
+    color: #94a3b8;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
