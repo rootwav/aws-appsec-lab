@@ -121,7 +121,7 @@ aws-appsec-lab/
 
 ## 📸 Screenshot
 
-![AWS AppSec Lab](screenshots/home_page.png)
+![AWS AppSec Lab](screenshots/indexPage.png)
 
 ---
 
