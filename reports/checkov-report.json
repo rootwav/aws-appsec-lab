@@ -1,0 +1,287 @@
+[
+    {
+        "check_type": "terraform_plan",
+        "results": {
+            "passed_checks": [],
+            "failed_checks": [],
+            "skipped_checks": [],
+            "parsing_errors": [
+                "/var/lib/jenkins/workspace/aws-appsec-lab/reports/checkov-report.json"
+            ]
+        },
+        "summary": {
+            "passed": 0,
+            "failed": 0,
+            "skipped": 0,
+            "parsing_errors": 1,
+            "resource_count": 0,
+            "checkov_version": "3.3.1"
+        },
+        "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+    },
+    {
+        "check_type": "dockerfile",
+        "results": {
+            "passed_checks": [
+                {
+                    "check_id": "CKV_DOCKER_7",
+                    "bc_check_id": "BC_DKR_7",
+                    "check_name": "Ensure the base image uses a non latest version tag",
+                    "check_result": {
+                        "result": "PASSED",
+                        "results_configuration": [
+                            {
+                                "instruction": "FROM",
+                                "startline": 0,
+                                "endline": 0,
+                                "content": "FROM nginx:alpine\n",
+                                "value": "nginx:alpine"
+                            }
+                        ]
+                    },
+                    "code_block": [
+                        [
+                            1,
+                            "FROM nginx:alpine\n"
+                        ]
+                    ],
+                    "file_path": "/Dockerfile",
+                    "file_abs_path": "/var/lib/jenkins/workspace/aws-appsec-lab/Dockerfile",
+                    "repo_file_path": "/Dockerfile",
+                    "file_line_range": [
+                        1,
+                        1
+                    ],
+                    "resource": "/Dockerfile.FROM",
+                    "evaluations": null,
+                    "check_class": "checkov.dockerfile.checks.ReferenceLatestTag",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-the-base-image-uses-a-non-latest-version-tag",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_DOCKER_11",
+                    "bc_check_id": "BC_DKR_GENERAL_9",
+                    "check_name": "Ensure From Alias are unique for multistage builds.",
+                    "check_result": {
+                        "result": "PASSED",
+                        "results_configuration": null
+                    },
+                    "code_block": [
+                        [
+                            1,
+                            "FROM nginx:alpine\n"
+                        ],
+                        [
+                            2,
+                            "COPY . /usr/share/nginx/html\n"
+                        ],
+                        [
+                            3,
+                            "EXPOSE 80"
+                        ]
+                    ],
+                    "file_path": "/Dockerfile",
+                    "file_abs_path": "/var/lib/jenkins/workspace/aws-appsec-lab/Dockerfile",
+                    "repo_file_path": "/Dockerfile",
+                    "file_line_range": [
+                        1,
+                        3
+                    ],
+                    "resource": "/Dockerfile.",
+                    "evaluations": null,
+                    "check_class": "checkov.dockerfile.checks.AliasIsUnique",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-docker-from-alias-is-unique-for-multistage-builds",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_DOCKER_1",
+                    "bc_check_id": "BC_DKR_1",
+                    "check_name": "Ensure port 22 is not exposed",
+                    "check_result": {
+                        "result": "PASSED",
+                        "results_configuration": null
+                    },
+                    "code_block": [
+                        [
+                            1,
+                            "FROM nginx:alpine\n"
+                        ],
+                        [
+                            2,
+                            "COPY . /usr/share/nginx/html\n"
+                        ],
+                        [
+                            3,
+                            "EXPOSE 80"
+                        ]
+                    ],
+                    "file_path": "/Dockerfile",
+                    "file_abs_path": "/var/lib/jenkins/workspace/aws-appsec-lab/Dockerfile",
+                    "repo_file_path": "/Dockerfile",
+                    "file_line_range": [
+                        1,
+                        3
+                    ],
+                    "resource": "/Dockerfile.",
+                    "evaluations": null,
+                    "check_class": "checkov.dockerfile.checks.ExposePort22",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-port-22-is-not-exposed",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                }
+            ],
+            "failed_checks": [
+                {
+                    "check_id": "CKV_DOCKER_2",
+                    "bc_check_id": "BC_DKR_2",
+                    "check_name": "Ensure that HEALTHCHECK instructions have been added to container images",
+                    "check_result": {
+                        "result": "FAILED",
+                        "results_configuration": null
+                    },
+                    "code_block": [
+                        [
+                            1,
+                            "FROM nginx:alpine\n"
+                        ],
+                        [
+                            2,
+                            "COPY . /usr/share/nginx/html\n"
+                        ],
+                        [
+                            3,
+                            "EXPOSE 80"
+                        ]
+                    ],
+                    "file_path": "/Dockerfile",
+                    "file_abs_path": "/var/lib/jenkins/workspace/aws-appsec-lab/Dockerfile",
+                    "repo_file_path": "/Dockerfile",
+                    "file_line_range": [
+                        1,
+                        3
+                    ],
+                    "resource": "/Dockerfile.",
+                    "evaluations": null,
+                    "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_DOCKER_3",
+                    "bc_check_id": "BC_DKR_3",
+                    "check_name": "Ensure that a user for the container has been created",
+                    "check_result": {
+                        "result": "FAILED",
+                        "results_configuration": null
+                    },
+                    "code_block": [
+                        [
+                            1,
+                            "FROM nginx:alpine\n"
+                        ],
+                        [
+                            2,
+                            "COPY . /usr/share/nginx/html\n"
+                        ],
+                        [
+                            3,
+                            "EXPOSE 80"
+                        ]
+                    ],
+                    "file_path": "/Dockerfile",
+                    "file_abs_path": "/var/lib/jenkins/workspace/aws-appsec-lab/Dockerfile",
+                    "repo_file_path": "/Dockerfile",
+                    "file_line_range": [
+                        1,
+                        3
+                    ],
+                    "resource": "/Dockerfile.",
+                    "evaluations": null,
+                    "check_class": "checkov.dockerfile.checks.UserExists",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                }
+            ],
+            "skipped_checks": [],
+            "parsing_errors": []
+        },
+        "summary": {
+            "passed": 3,
+            "failed": 2,
+            "skipped": 0,
+            "parsing_errors": 0,
+            "resource_count": 1,
+            "checkov_version": "3.3.1"
+        },
+        "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+    }
+]
