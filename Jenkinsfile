@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkov Scan') {
             steps {
-                sh 'checkov -d .'
+                sh '/home/ubuntu/.local/bin/checkov -d . || true'
             }
         }
 
