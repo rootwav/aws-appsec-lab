@@ -22,6 +22,12 @@ pipeline {
             }
         }
 
+        stage('Checkov Scan') {
+            steps {
+                sh 'checkov -d .'
+            }
+        }
+
         stage('Docker Build') {
             steps {
                 sh 'docker build -t aws-appsec-lab:latest .'
@@ -41,10 +47,5 @@ pipeline {
                 sh 'docker ps'
             }
         }
-stage('Checkov Scan') {
-    steps {
-        sh 'checkov -d .'
-    }
-}
     }
 }
