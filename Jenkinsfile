@@ -41,6 +41,10 @@ pipeline {
                 sh 'docker ps'
             }
         }
-
+stage('Checkov Scan') {
+    steps {
+        sh 'checkov -d .'
+    }
+}
     }
 }
