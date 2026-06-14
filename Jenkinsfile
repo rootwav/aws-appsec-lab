@@ -30,6 +30,7 @@ stages {
             sh 'docker ps'
         }
     }
+
 }
 ```
 
